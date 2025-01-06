@@ -1,0 +1,104 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+android {
+    namespace = "com.GP.project"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+
+
+    compileSdkVersion flutter.compileSdkVersion
+    ndkVersion flutter.ndkVersion
+
+
+
+    defaultConfig {
+        applicationId = "com.GP.project"
+        minSdkVersion = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        multiDexEnabled true
+
+    }
+
+    buildTypes {
+        release {
+
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+  //  implementation 'org.tensorflow:tensorflow-lite:2.5.0'
+ }
+
+//plugins {
+//    id 'com.android.application'
+//    id 'kotlin-android'
+//    id 'com.google.gms.google-services'
+////    id 'io.flutter.flutter-plugin'
+////    id "dev.flutter.flutter-gradle-plugin"
+// }
+//
+//android {
+//    namespace = "com.GP.project"
+//    compileSdk = flutter.compileSdkVersion
+//    ndkVersion = flutter.ndkVersion
+//
+//
+//       compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_7
+//        targetCompatibility JavaVersion.VERSION_1_7
+//    }
+//
+//       kotlinOptions {
+//        jvmTarget = '1.8'
+//    }
+//
+//       sourceSets {
+//        main.java.srcDirs += 'src/main/kotlin'
+//    }
+//
+//    defaultConfig {
+//        applicationId "com.GP.project"
+//        minSdk =  flutter.minSdkVersion
+//        targetSdk = flutter.targetSdkVersion
+//        multiDexEnabled true
+//        versionCode = flutter.versionCode
+//        versionName = flutter.versionName
+//    }
+//
+//    buildTypes {
+//        release {
+//            signingConfig signingConfigs.debug
+//        }
+//    }
+//}
+//
+//flutter {
+//    source '../..'
+//}
+//
+//dependencies {
+//    implementation 'org.tensorflow:tensorflow-lite:2.5.0'
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//}
